@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CityManager">
+
+    <ListView
+        android:id="@+id/cities"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:divider="#00000000"
+        android:dividerHeight="18dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:layout_margin="20dp"
+        android:src="@drawable/plus_icon"
+        app:backgroundTint="#ffffffff"
+        app:borderWidth="0dp"
+        app:elevation="6dp"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:pressedTranslationZ="6dp"
+        app:rippleColor="#ffe5e5e5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

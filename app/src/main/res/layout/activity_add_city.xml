@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".addCity">
+
+    <EditText
+        android:id="@+id/city_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="输入城市名" />
+
+    <TextView
+        android:id="@+id/noResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="无结果"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cSpinner" />
+
+    <Spinner
+        android:id="@+id/pSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/cache0" />
+
+    <Spinner
+        android:id="@+id/cSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/pSpinner"
+        app:layout_constraintTop_toBottomOf="@id/cache0" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:layout_margin="20dp"
+        android:src="@drawable/browse_icon"
+        app:backgroundTint="#ffffffff"
+        app:borderWidth="0dp"
+        app:elevation="6dp"
+        app:fabSize="mini"
+        app:layout_constraintLeft_toLeftOf="@id/city_input"
+        app:layout_constraintRight_toRightOf="@id/city_input"
+        app:layout_constraintTop_toBottomOf="@id/city_input"
+        app:pressedTranslationZ="6dp"
+        app:rippleColor="#ffe5e5e5" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/cSpinner" />
+
+    <ListView
+        android:id="@+id/resultCast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/result" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/follow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:layout_margin="20dp"
+        android:src="@drawable/plus_icon"
+        android:visibility="gone"
+        app:backgroundTint="#ffffffff"
+        app:borderWidth="0dp"
+        app:elevation="6dp"
+        app:fabSize="mini"
+        app:layout_constraintLeft_toLeftOf="@id/reportTime"
+        app:layout_constraintRight_toRightOf="@id/reportTime"
+        app:layout_constraintTop_toBottomOf="@id/reportTime"
+        app:pressedTranslationZ="6dp"
+        app:rippleColor="#ffe5e5e5" />
+
+    <ListView
+        android:id="@+id/cityResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/pSpinner" />
+
+    <TextView
+        android:id="@+id/reportTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="@id/resultCast"
+        app:layout_constraintRight_toRightOf="@id/resultCast"
+        app:layout_constraintTop_toBottomOf="@id/resultCast" />
+
+    <TextView
+        android:id="@+id/cache0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/temp" />
+
+    <TextView
+        android:id="@+id/cache1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/cache0"
+        app:layout_constraintTop_toBottomOf="@id/temp" />
+
+    <TextView
+        android:id="@+id/cache2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/cache1"
+        app:layout_constraintTop_toBottomOf="@id/temp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
